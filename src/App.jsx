@@ -1,6 +1,7 @@
 import { Container } from 'react-bootstrap';
 import './App.css';
 import Header from './Components/Header';
+import Footer from './Components/Footer';
 
 function App() {
   return (
@@ -68,7 +69,9 @@ function App() {
         </Container>
       </div>
       {/* Contact Us */}
-      <div id="contact-us" className='contact-us'>
+      {/* Contact Us */}
+      <div className='contact-us'>
+        {/* Map Background */}
         <div className='map-background'>
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4963.390999999999!2d-0.210000!3d51.420000!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4876099e3b!2sWimbledon!5e0!3m2!1sen!2suk!4v00000000000"
@@ -82,23 +85,25 @@ function App() {
           ></iframe>
         </div>
 
-        <div className='contact-card'>
-          <h2>Contact Us</h2>
-          <div>
-            <p className='mb-0'>📍 Wimbledon, London</p>
-            <p className='mb-0'>📞 +44 20 1234 5678</p>
-            <p className='mb-0'>✉️ info@owndesign.co.uk</p>
+        {/* Contact Info Bar */}
+        <div className='contact-bar'>
+          <div className='contact-item'>
+            <h3>📍 Address</h3>
+            <p>Wimbledon, London</p>
+          </div>
+          <div className='contact-item'>
+            <h3>📞 Phone</h3>
+            <p>+44 20 1234 5678</p>
+          </div>
+          <div className='contact-item'>
+            <h3>✉️ Email</h3>
+            <p>info@owndesign.co.uk</p>
           </div>
         </div>
       </div>
+
       {/* Footer */}
-      <div className='footer-div'>
-        <div>
-          <a href="#about-us">About</a>
-          <a href="#investment-focus">Investment Focus</a>
-          <a href="#contact-us">Contact Us</a>
-        </div>
-      </div>
+      <Footer />
     </>
   )
 }
